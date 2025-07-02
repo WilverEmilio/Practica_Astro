@@ -1,8 +1,26 @@
 ---
-import BaseLayout from "../layauts/index.astro";
+import BaseLayout from "@/layauts/index.astro";
+import stickers from "@/data/stickers.json";
+import Sticker from "@/components/Sticker.astro";
+
 ---
+
+<style>
+ .sticker-colection{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+ }
+</style>
+
 
 <!-- Esto para poder enrutar varias paginas, con el Layaut, es decir un componente que se usa en varias paginas -->
 <BaseLayout title = "Página principal", description="Esta es mi primera pagina web con Astro">
-  <h1>Astro</h1>
+  <h1>Astro - Página principal</h1>
+  
+  <div class="sticker-colection">
+  {stickers.map((sticker) => (
+    <Sticker data={sticker} />
+  ))}
+  </div>
 </BaseLayout>

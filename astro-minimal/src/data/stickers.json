@@ -1,0 +1,22 @@
+[
+    {
+        "name": "ManzDance",
+        "url": "https://manz.dev/assets/stickers/manzdevdance.gif",
+        "category": "streamer"
+    },
+    {
+        "name": "ManzPikachu",
+        "url": "https://manz.dev/assets/stickers/pikachubad.gif",
+        "category": "pikachu"
+    },
+    {
+        "name": "ManzKappa",
+        "url": "https://manz.dev/assets/stickers/kappahonk.gif",
+        "category": "kappa"
+    },
+    {
+        "name":"ManzShazam",
+        "url": "https://manz.dev/assets/stickers/shazam.png",
+        "category": "shazam"
+    }
+]
