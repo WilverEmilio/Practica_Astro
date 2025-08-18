@@ -2,6 +2,9 @@
 import BaseLayout from "@/layauts/index.astro";
 import stickers from "@/data/stickers.json";
 import Sticker from "@/components/Sticker.astro";
+import AstroHeart from "@/components/AstroHeard.astro";
+import manzdevCasual from "@/assets/manzdev-tip.gif";
+import "@fontsource-variable/merienda";
 
 ---
 
@@ -11,8 +14,14 @@ import Sticker from "@/components/Sticker.astro";
   flex-wrap: wrap;
   gap: 1rem;
  }
+ h1{
+  font-family: "Merienda Variable";
+ }
 </style>
 
+<script>
+  console.log("Hola, esta es una prueba de Astro");
+</script>
 
 <!-- Esto para poder enrutar varias paginas, con el Layaut, es decir un componente que se usa en varias paginas -->
 <BaseLayout title = "Página principal", description="Esta es mi primera pagina web con Astro">
@@ -23,4 +32,6 @@ import Sticker from "@/components/Sticker.astro";
     <Sticker data={sticker} />
   ))}
   </div>
+  <img src={manzdevCasual.src} alt={"Manzdev Casual" + manzdevCasual.format} width={manzdevCasual.width} height={manzdevCasual.height} /> <!-- Esta es una manera para poder mostrar las imagenes-->
+    <!-- <AstroHeart /> -->
 </BaseLayout>
