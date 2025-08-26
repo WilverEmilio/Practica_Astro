@@ -1,0 +1,56 @@
+---
+import "@fontsource-variable/exo"
+---
+<style>
+    nav{
+    --theme-color-lightst: #0F172A;   /* fondo principal */
+    --theme-color-light: #38BDF8;     /* azul acento */
+    --theme-color-dark: #1E293B;      /* hover */
+    --theme-color-medium: #94A3B8;    /* gris para texto */
+    --theme-background-color: #1E293B; /* fondo de navegación */
+
+        background: var(--theme-color-lightst);
+        font-family: "Exo Variable", sans-serif;
+        display: flex;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-weight: 600;
+
+        & .wrapper {
+            display: flex;
+        }
+
+        & a{
+            display: block;
+            color: var(--theme-color-light);
+            padding: 1rem 3rem;
+            text-decoration: none;
+            background: var(--theme-color-lightst);
+            border-bottom: 10px solid color-mix(in srgb, var(--bgcolor), #fff 20%);
+            transition: 
+                background 0.3s, 
+                color 0.3s;
+        }
+        & a:nth-child(1) {--bgcolor: green;}
+        & a:nth-child(2) {--bgcolor: blue;}
+        & a:nth-child(3) {--bgcolor: red;}
+        & a:nth-child(4) {--bgcolor: yellow;}
+        & a:nth-child(5) {--bgcolor: purple;}
+
+        & a:hover{
+            background: var(--bgcolor);
+            /* Seleccionar uno de los dos */
+            color: #fff;
+            /* color: var(--theme-color-light); */
+        }
+    }
+</style>
+<nav>
+    <div class="wrapper">
+        <a href="/">Inicio</a>
+        <a href="/services">Servicios</a>
+        <a href="/portafolio">Portfolio</a>
+        <a href="/testimonials">Testimonios</a>
+        <a href="/faq">FAQ</a>
+    </div>
+</nav>

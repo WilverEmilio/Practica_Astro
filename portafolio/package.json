@@ -9,6 +9,8 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@fontsource-variable/exo": "^5.2.6",
+    "@fontsource/exo": "^5.2.6",
     "astro": "^5.13.2"
   }
 }

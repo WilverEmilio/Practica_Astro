@@ -230,6 +230,16 @@
   resolved "https://registry.yarnpkg.com/@esbuild/win32-x64/-/win32-x64-0.25.9.tgz#585624dc829cfb6e7c0aa6c3ca7d7e6daa87e34f"
   integrity sha512-PPOl1mi6lpLNQxnGoyAfschAodRFYXJ+9fs6WHXz7CSWKbOqiMZsubC+BQsVKuul+3vKLuwTHsS2c2y9EoKwxQ==
 
+"@fontsource-variable/exo@^5.2.6":
+  version "5.2.6"
+  resolved "https://registry.yarnpkg.com/@fontsource-variable/exo/-/exo-5.2.6.tgz#641d83083b74650789a8e7b6a398837f20dc8f05"
+  integrity sha512-3TmpBFTGuo5dRmorWgZXaxlAR/3gvCwHMCyrVjMWEUyzLoxfIq9on3O/lOtF5xo6gOz2R6pa19bsEQph1BFmjw==
+
+"@fontsource/exo@^5.2.6":
+  version "5.2.6"
+  resolved "https://registry.yarnpkg.com/@fontsource/exo/-/exo-5.2.6.tgz#280ba6d3e33d5c53ce7186e5946088e100e03490"
+  integrity sha512-+oaxBugQrTPM16As7ubmUfowzAMnCtAF53k53X3ykyjRFXJUVlEdUTq+PAHAnbTCPI2F/RpVDAiaZTQIJu/XdQ==
+
 "@img/sharp-darwin-arm64@0.33.5":
   version "0.33.5"
   resolved "https://registry.yarnpkg.com/@img/sharp-darwin-arm64/-/sharp-darwin-arm64-0.33.5.tgz#ef5b5a07862805f1e8145a377c8ba6e98813ca08"
