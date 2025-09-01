@@ -1,1 +1,41 @@
- 
+---
+
+--- 
+<style>
+    .hero{
+        --color-dark: color-mix(in srgb, var(--theme-color-light), #fff 0%);
+        --color-light: color-mix(in srgb, var(--theme-color-lightst), #fff 0%);
+
+        width: 100%;
+        height: 300px;
+        background-image:
+        url("/images/black-felt.png"),
+        linear-gradient(
+            color-mix(in srgb, var(--theme-color-light), transparent 15%),
+            color-mix(in srgb, var(--theme-color-lightst), transparent 50%)
+            ),
+        radial-gradient(circle, transparent 0% 15%, black 35%),
+        repeating-conic-gradient(
+            var(--color-dark) 0 15deg, 
+            var(--color-light) 15deg 30deg
+            );
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 52% 100%, 0 85%);
+        &:hover .hero-image {
+            transform: translateY(0px);
+        }
+
+        & .hero-image {
+            height: 290px;
+            transform: translateY(30px);
+            transition: transform 0.5 ease-in-out;
+        }
+    }
+</style>
+
+<header class="hero">
+    <a href="/"><img class="hero-image" src="/images/foto2.png" alt="personal"></a>
+</header>

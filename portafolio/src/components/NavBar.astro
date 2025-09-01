@@ -1,14 +1,15 @@
 ---
 import "@fontsource-variable/exo"
+const ROUTES = [
+    { path: "/", name: "Inicio" },
+    { path: "/services", name: "Servicios" },
+    { path: "/portafolio", name: "Portfolio" },
+    { path: "/testimonials", name: "Testimonios" },
+    { path: "/faq", name: "FAQ" }
+]
 ---
 <style>
     nav{
-    --theme-color-lightst: #0F172A;   /* fondo principal */
-    --theme-color-light: #38BDF8;     /* azul acento */
-    --theme-color-dark: #1E293B;      /* hover */
-    --theme-color-medium: #94A3B8;    /* gris para texto */
-    --theme-background-color: #1E293B; /* fondo de navegación */
-
         background: var(--theme-color-lightst);
         font-family: "Exo Variable", sans-serif;
         display: flex;
@@ -22,7 +23,7 @@ import "@fontsource-variable/exo"
 
         & a{
             display: block;
-            color: var(--theme-color-light);
+            color: color-mix(in srgb, var(--theme-color-medium), #020202 50%);
             padding: 1rem 3rem;
             text-decoration: none;
             background: var(--theme-color-lightst);
@@ -31,11 +32,13 @@ import "@fontsource-variable/exo"
                 background 0.3s, 
                 color 0.3s;
         }
-        & a:nth-child(1) {--bgcolor: green;}
-        & a:nth-child(2) {--bgcolor: blue;}
-        & a:nth-child(3) {--bgcolor: red;}
-        & a:nth-child(4) {--bgcolor: yellow;}
-        & a:nth-child(5) {--bgcolor: purple;}
+        & a:nth-child(1){ --bgcolor: #558d02; }  /* Inicio → Verde global */
+        & a:nth-child(2){ --bgcolor: #090967; }  /* Servicios → Azul acento oscuro */
+        & a:nth-child(3){ --bgcolor: #7079d3; }  /* Portfolio → Azul hover */
+        & a:nth-child(4){ --bgcolor: #9d174d; }  /* Testimonios → Vino oscuro elegante */
+        & a:nth-child(5){ --bgcolor: #d97706; }  /* FAQ → Naranja/ámbar sobrio */
+
+
 
         & a:hover{
             background: var(--bgcolor);
@@ -47,10 +50,13 @@ import "@fontsource-variable/exo"
 </style>
 <nav>
     <div class="wrapper">
-        <a href="/">Inicio</a>
+        <!-- <a href="/">Inicio</a>
         <a href="/services">Servicios</a>
         <a href="/portafolio">Portfolio</a>
         <a href="/testimonials">Testimonios</a>
-        <a href="/faq">FAQ</a>
+        <a href="/faq">FAQ</a> -->
+        {ROUTES.map(route => (
+            <a href={route.path}>{route.name}</a>
+        ))}
     </div>
 </nav>
